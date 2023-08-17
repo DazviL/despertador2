@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DespertadorJS</title>
+    <link rel="stylesheet" href="despertador.css" />
+    <script src="https://kit.fontawesome.com/395449a2ad.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="relogioLayout">
+            <div class="definidoPara">
+                <h1 id="alarmeDefinido"></h1>
+                <h1 id="alarmeDefinidoMin"></h1>
+            </div>
+            <h1 id="relogio"></h1>
+            <h1 id="data"></h1>
+            <button id="comecar" type="button">começar</button>
+        </div><!--relogioLayout-->`
+
+        <div class="menuLayout off" id="menuLayout">
+            <div class="menuInfo">
+            <div class="menuHeader">
+                <h1>Configurar Alarme</h1>
+                <button type="button" id="menuFechar">X</button>
+            </div><!--menuHeader-->
+
+            <div class="menuSelect">
+                <div class="selectH">
+                    <h2>Horas:</h2>
+                    <select name="selectHoras" id="selectHoras"></select>
+                </div><!--selectH-->
+                <div class="selectM">
+                    <h2>Minutos:</h2>
+                    <select name="selectMin" id="selectMin"></select>
+                </div><!--selectM-->
+            </div><!--menuSelect-->
+            <div class="tituloAlarme">
+                <h2>Titulo:</h2>
+                <input maxlength="24" type="text" id="titulo">
+            </div>
+            <div class="menuFooter">
+                <div class="teste">
+                <button id="testeAlarme">Teste Alarme</button>
+                    <i id="volume" class="fas fa-volume-off"></i>
+                </div>
+                <div>
+                    <button id="Cancelar">Cancelar</button>
+                    <button id="Iniciar">Iniciar</button>
+                </div>
+            </div><!--menuFooter-->
+            </div><!--MenuInfo-->
+        </div><!--menuLayout-->
+        <div class="off" id="alarmeTocando">
+            <h1 id="tituloDefinido"></h1>
+            <div class="relogioTocando">
+                <h1 id="horaDefinida"></h1>
+                <h1 id="minutoDefinido"></h1>
+            </div><!--relogioTocando-->
+            <button id="cancelarAlarme">Cancelar</button>
+        </div><!--alarmeTocando-->
+    </div><!--container-->
+
+    <audio loop id="alarme" src="alarm.mp3"></audio>
+    <script src="despertador.js"></script>
+</body>
+
+</html>
